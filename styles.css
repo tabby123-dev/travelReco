@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+header {
+    background-color: #4a75ae;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form select, form button {
+    margin: 5px 0;
+}
+/* Intro Section Styling */
+/* Intro Section Styling with Background Image */
+.intro {
+    text-align: center; /* Center-align text */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the div horizontally */
+    padding: 40px 20px; /* Add more padding for better spacing */
+    background-image: url('images/travel-bg.jpg'); /* Add background image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #fff; /* White text for better contrast */
+    position: relative; /* Required for overlay */
+    overflow: hidden; /* Ensure the overlay doesn't overflow */
+}
+
+/* Overlay to make text readable */
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+/* Ensure text is above the overlay */
+.intro p {
+    position: relative; /* Place text above the overlay */
+    z-index: 2; /* Ensure text is on top */
+    font-size: 18px; /* Slightly larger font size */
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+.intro p:first-child {
+    font-weight: bold; /* Make the first paragraph bold */
+}
+
+.intro p:last-child {
+    font-style: italic; /* Italicize the last paragraph */
+}
+
+#destinations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/* About Us Section */
+#about {
+    padding: 20px;
+    background-color: #4a75ae;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#about h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#about p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Contact Us Section */
+#contact {
+    padding: 20px;
+    background-color: #4a75ae;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#contact h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contact-form button:hover {
+    background-color: #555;
+}
+
+.destination-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(33.333% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #13859a;
+    color: #b9bbad;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

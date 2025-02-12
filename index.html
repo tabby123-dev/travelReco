@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Recommendations</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to Travel Recommendations!</h2>
+            <div class="intro">
+                <p>
+                    Are you dreaming of your next adventure? <br>Whether you're looking for a relaxing beach getaway,<br> 
+                    an exciting mountain trek,<br> or a vibrant city tour,<br> we're here to help you find the perfect destination.<br> 
+                    Our travel recommendation tool is designed <br> to match you with destinations that suit your preferences,<br> 
+                    ensuring you have a memorable and enjoyable trip.
+                </p>
+                <p>
+                    Start by selecting your preferred destination type below, and let us guide you to your dream vacation!
+                </p>
+            </div>
+            <form id="preferences-form">
+                <label for="destination-type">Destination Type:</label>
+                <select id="destination-type">
+                    <option value="beach">Beach</option>
+                    <option value="mountain">Mountain</option>
+                    <option value="city">City</option>
+                </select>
+                <button type="submit">Find Recommendations</button>
+            </form>
+        </section>
+
+        <!-- Destinations Section -->
+        <section id="destinations">
+            <h2>Recommended Destinations</h2>
+            <div id="destinations-list"></div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Travel Recommendations! We are passionate about helping you discover the perfect destinations for your next adventure. 
+                Our team of travel experts curates the best recommendations based on your preferences, ensuring you have a memorable and enjoyable trip.
+            </p>
+            <p>
+                Whether you're looking for a relaxing beach getaway, an adventurous mountain trek, or an exciting city tour, we've got you covered. 
+                Let us guide you to your dream destination!
+            </p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or need assistance? Reach out to us!</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Travel Recommendations</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
