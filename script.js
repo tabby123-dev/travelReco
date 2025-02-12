@@ -28,16 +28,16 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 function getRecommendations(type) {
     const destinations = {
         beach: [
-            { name: "Maldives", description: "Beautiful beaches and clear waters.", image: "images/maldives.jpg" },
-            { name: "Bali", description: "Exotic beaches and vibrant culture.", image: "images/bali.jpg" }
+            { name: "Maldives", description: "Beautiful beaches and clear waters.", image: "maldives.jpg" },
+            { name: "Bali", description: "Exotic beaches and vibrant culture.", image: "bali.jpg" }
         ],
         mountain: [
-            { name: "Swiss Alps", description: "Majestic mountains and scenic views.", image: "images/swiss-alps.jpg" },
-            { name: "Rocky Mountains", description: "Great for hiking and adventure.", image: "images/rocky-mountains.jpg" }
+            { name: "Swiss Alps", description: "Majestic mountains and scenic views.", image: "swiss-alps.jpg" },
+            { name: "Rocky Mountains", description: "Great for hiking and adventure.", image: "rocky-mountains.jpg" }
         ],
         city: [
-            { name: "Paris", description: "The city of lights and romance.", image: "images/paris.jpg" },
-            { name: "New York", description: "The city that never sleeps.", image: "images/new-york.jpg" }
+            { name: "Paris", description: "The city of lights and romance.", image: "paris.jpg" },
+            { name: "New York", description: "The city that never sleeps.", image: "new-york.jpg" }
         ]
     };
     return destinations[type] || [];
