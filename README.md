@@ -1,0 +1,1 @@
+A web app that suggests travel destinations, attractions, and experiences based on user preferences such as interests, budget, and location. It helps users plan trips, explore top destinations, and discover new places around the world.
