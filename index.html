@@ -3,86 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Recommendation Website</title>
+    <title>Travel Recommendations</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Segoe+UI:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Travel Recommendations</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="container header-flex">
+            <h1><span class="logo-icon">🌍</span> TravelReco</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <!-- Home Section -->
-        <section id="home">
-            <h2>Welcome to Travel Recommendations!</h2>
-            <div class="intro">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Discover Your Next Adventure</h2>
                 <p>
-                    Are you dreaming of your next adventure? <br>Whether you're looking for a relaxing beach getaway,<br> 
-                    an exciting mountain trek,<br> or a vibrant city tour,<br> we're here to help you find the perfect destination.<br> 
-                    Our travel recommendation tool is designed <br> to match you with destinations that suit your preferences,<br> 
-                    ensuring you have a memorable and enjoyable trip.
+                    Whether you crave a tranquil beach, a thrilling mountain, or a vibrant city, TravelReco helps you find your perfect destination.
                 </p>
-                <p>
-                    Start by selecting your preferred destination type below, and let us guide you to your dream vacation!
-                </p>
+                <form id="preferences-form" class="preferences-form card">
+                    <label for="destination-type">What kind of trip do you want?</label>
+                    <select id="destination-type">
+                        <option value="beach">Beach</option>
+                        <option value="mountain">Mountain</option>
+                        <option value="city">City</option>
+                    </select>
+                    <button type="submit">Find Recommendations</button>
+                </form>
             </div>
-            <form id="preferences-form">
-                <label for="destination-type">Destination Type:</label>
-                <select id="destination-type">
-                    <option value="beach">Beach</option>
-                    <option value="mountain">Mountain</option>
-                    <option value="city">City</option>
-                </select>
-                <button type="submit">Find Recommendations</button>
-            </form>
+            <div class="hero-image"></div>
         </section>
 
         <!-- Destinations Section -->
         <section id="destinations">
-            <h2>Recommended Destinations</h2>
-            <div id="destinations-list"></div>
+            <h2 class="section-title">Recommended Destinations</h2>
+            <div id="destinations-list" class="card-grid">
+                <!-- Destination cards will be injected here by script.js -->
+            </div>
         </section>
 
         <!-- About Us Section -->
-        <section id="about">
+        <section id="about" class="card about-card">
             <h2>About Us</h2>
             <p>
-                Welcome to Travel Recommendations! We are passionate about helping you discover the perfect destinations for your next adventure. 
-                Our team of travel experts curates the best recommendations based on your preferences, ensuring you have a memorable and enjoyable trip.
+                At TravelReco, we’re passionate about helping you discover the world’s most beautiful places. Our team curates personalized recommendations so you can travel with confidence and joy.
             </p>
-            <p>
-                Whether you're looking for a relaxing beach getaway, an adventurous mountain trek, or an exciting city tour, we've got you covered. 
-                Let us guide you to your dream destination!
-            </p>
+            <div class="team">
+                <div class="team-member">
+                    <img src="images.jpeg" alt="Team Member 1">
+                    <span>Alex</span>
+                </div>
+                <div class="team-member">
+                    <img src="images.jpeg" alt="Team Member 2">
+                    <span>Jamie</span>
+                </div>
+                <div class="team-member">
+                    <img src="images.jpeg" alt="Team Member 3">
+                    <span>Sam</span>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Us Section -->
-        <section id="contact">
+        <section id="contact" class="card contact-card">
             <h2>Contact Us</h2>
-            <p>Have questions or need assistance? Reach out to us!</p>
+            <p>Have questions or need help? Reach out and we’ll get back to you soon!</p>
             <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
                 <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Travel Recommendations</p>
+        <div class="container">
+            <p>&copy; 2025 TravelReco. Crafted with <span style="color:#e57373;">&#10084;</span></p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
